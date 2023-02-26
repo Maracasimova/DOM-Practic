@@ -94,10 +94,13 @@ const btnEl = document.querySelector("#double");
 const liItemsEl = document.querySelectorAll(".listItem");
 console.log(liItemsEl);
 
-btnEl.addEventListener('click', () => {
+function Double() {
     liItemsEl.forEach((item) => {
-        const newValue = BigInt(item.textContent) ** 2n;
-        item.textContent = newValue;
-    })    
-});
+      const newValue = BigInt(item.textContent) ** 2n;
+      item.textContent = newValue;
+    });
+}
+    
+btnEl.addEventListener('click', Double);
+
 

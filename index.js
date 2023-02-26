@@ -83,3 +83,21 @@
 //   boxEl.style.width = `${width}px`;
 //   boxEl.style.height = `${height}px`;
 // });
+
+
+/*
+Нажав кнопку "Удвоить", увеличить значение
+в каждом элементе списка в 2 раза
+*/
+
+const btnEl = document.querySelector("#double");
+const liItemsEl = document.querySelectorAll(".listItem");
+console.log(liItemsEl);
+
+btnEl.addEventListener('click', () => {
+    liItemsEl.forEach((item) => {
+        const newValue = BigInt(item.textContent) ** 2n;
+        item.textContent = newValue;
+    })    
+});
+
